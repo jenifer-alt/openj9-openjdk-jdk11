@@ -38,5 +38,6 @@ Java_java_lang_Shutdown_beforeHalt(JNIEnv *env, jclass ignored)
 JNIEXPORT void JNICALL
 Java_java_lang_Shutdown_halt0(JNIEnv *env, jclass ignored, jint code)
 {
+    printf("\n======== Java 11 ===== just before calling JVM_Halt with code: %d\n", code);
     JVM_Halt(code);
 }
